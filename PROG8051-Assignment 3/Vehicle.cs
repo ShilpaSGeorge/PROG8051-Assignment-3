@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROG8051_Assignment_3
 {
+    //Vehicle Class
     class Vehicle
     {
         public string Model;
@@ -18,6 +19,7 @@ namespace PROG8051_Assignment_3
         public int MadeYear { get { return Year; } set {  Year = value; }}
         public double VehiclePrice { get { return RentalPrice; } set { RentalPrice = value; }}
 
+        // To Display Details of Vehicles
         public virtual void DisplayDetails()
         {
             Console.WriteLine($"Model : {VehicleModel}\n Manufacturer : {VehicleManufacturer}\n Year of Manufacture : {MadeYear}\n Price of Vehicle : {VehiclePrice}");
