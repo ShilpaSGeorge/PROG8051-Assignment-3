@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace PROG8051_Assignment_3
 {
-     class Car
+     class Car : Vehicle
     {
+        private int Seats = 5;
+        public string EngineType = "Petrol Engine";
+        public string Transmission = "Automatic";
+        public string Convertible = "Yes";
+
+
+        public override void DisplayDetails()
+        {
+            Console.WriteLine($"Model : {Model}\n Manufacturer : {Manufacturer}\n Year of Manufacture : {Year}\n " +
+                $"Price of Vehicle : {RentalPrice} \n Seats = {Seats}\n EngineType : {EngineType}\n Transmission: {Transmission}\n Convertible:{Convertible} ");
+
+        }
     }
 }
