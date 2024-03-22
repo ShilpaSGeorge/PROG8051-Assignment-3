@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PROG8051_Assignment_3
 {
     //Vehicle Class
-    class Vehicle
+     abstract class  Vehicle
     {
         public string Model;
         public string Manufacturer;
@@ -20,31 +20,29 @@ namespace PROG8051_Assignment_3
         public int MadeYear { get { return Year; } set {  Year = value; }}
         public double VehiclePrice { get { return RentalPrice; } set { RentalPrice = value; }}
        */
-       public void VehicleModel()
+       public void VehicleDetails()
         {
             Console.WriteLine("Enter the Model:");
             string model = Console.ReadLine();
             Model = model;
-        }
-        public void VehicleManufacturer(string manufacturer)
-        {
-            
+        
+            Console.WriteLine("Enter the Manufacturer:");
+            string manufacturer = Console.ReadLine();
             Manufacturer = manufacturer;
-
-
-        }
-        public void MadeYear(int year) 
-        {  
-         
+       
+            Console.WriteLine("Enter the Manufacture Year:");
+            int year = Convert.ToInt32(Console.ReadLine());
             Year = year;
-        }  
-        public void VehiclePrice( double price) { RentalPrice = price; }
+       
+            Console.WriteLine("Enter the vehicle price:");
+            double price = Convert.ToDouble(Console.ReadLine());
+
+            RentalPrice = price; 
+        }
 
         // To Display Details of Vehicles
-        public virtual void DisplayDetails()
-        {
-            Console.WriteLine($"Model : {Model}\n Manufacturer : {Manufacturer}\n Year of Manufacture : {Year}\n Price of Vehicle : {RentalPrice}");
-        }
+        public abstract void DisplayDetails();
+        
 
     }
 }

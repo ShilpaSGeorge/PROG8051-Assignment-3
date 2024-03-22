@@ -9,9 +9,9 @@ namespace PROG8051_Assignment_3
      class Car : Vehicle
     {
         private int Seats = 5;
-        public string EngineType = "Petrol Engine";
-        public string Transmission = "Automatic";
-        public string Convertible = "Yes";
+        private string EngineType = "Petrol Engine";
+        private string Transmission = "Automatic";
+        private string Convertible = "Yes";
 
 
         public override void DisplayDetails()
