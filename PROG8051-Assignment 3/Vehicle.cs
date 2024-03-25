@@ -10,7 +10,7 @@ namespace PROG8051_Assignment_3
     //Vehicle Class
      abstract class  Vehicle
     {
-        public string Model;
+        public string Model ;
         public string Manufacturer;
         public int Year;
         public double RentalPrice;
@@ -20,14 +20,14 @@ namespace PROG8051_Assignment_3
         public int MadeYear { get { return Year; } set {  Year = value; }}
         public double VehiclePrice { get { return RentalPrice; } set { RentalPrice = value; }}
        */
-       public void VehicleDetails()
+       public  void VehicleDetails()
         {
             Console.WriteLine("Enter the Model:");
-            string model = Console.ReadLine();
+           string  model = Console.ReadLine();
             Model = model;
-        
+            
             Console.WriteLine("Enter the Manufacturer:");
-            string manufacturer = Console.ReadLine();
+           string manufacturer = Console.ReadLine();
             Manufacturer = manufacturer;
        
             Console.WriteLine("Enter the Manufacture Year:");

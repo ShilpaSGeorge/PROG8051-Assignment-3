@@ -1,39 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG8051_Assignment_3
+namespace PROG8051_Assignment_3.RentalAgency
 {
      class RentalAgency : Vehicle
     {
-        Car car = new Car();
-        Truck truck;
-
+        Car car1 = new Car();
+       
+      
         public double TotalRevenue;
-        
+  
+        string [] fleet = new string[10];
         int count = 0;
-        public RentalAgency()
-        {
-           string model
+        
+       public void AddItems(string fleets) 
+        { 
+            fleet[count++] = fleets;
+            DisplayDetails();
         }
 
-        RentalAgency[] fleet = new RentalAgency[10]; 
-
-        public void AddItems(RentalAgency fleets)
+        
+        public void RemoveItem()
         {
-            fleet[count++] = fleets;
             
         }
-        public void RemoveItem()
+
+        public void RentItem()
         {
 
         }
 
         public override void DisplayDetails()
         {
-            Console.WriteLine(Model);
+            for(int i = 0;i < count;i++)
+            {
+                Console.WriteLine($"{fleet[i]}");
+            }
+            
             
         }
     }
