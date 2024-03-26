@@ -43,5 +43,8 @@ Console.WriteLine("List of Vehicle Models Available");
 rentalAgency.DisplayDetails();
 rentalAgency.RemoveItem(model1);
 
+int choice = Convert.ToInt32(Console.ReadLine());
+rentalAgency.RentItem(choice);
+
 
 

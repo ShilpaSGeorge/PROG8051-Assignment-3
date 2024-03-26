@@ -10,6 +10,8 @@ namespace PROG8051_Assignment_3.RentalAgency
      class RentalAgency : Vehicle
     {
         Car car1 = new Car();
+        Truck truck1 = new Truck();
+        Motorcycle motorcycle1 = new Motorcycle();
        
       
         public double TotalRevenue;
@@ -48,8 +50,23 @@ namespace PROG8051_Assignment_3.RentalAgency
             
         }
 
-        public void RentItem()
+        public void RentItem(int a)
         {
+            Console.WriteLine("****Choose the vehicle to be rented****\n 1. CAR \n 2. TRUCK \n 3. MOTORCYCLE");
+            
+            switch(a)
+            {
+                case 1:
+                    car1.DisplayDetails();
+                    break;
+                case 2:
+                    truck1.DisplayDetails();
+                    break;
+                case 3:
+                    motorcycle1 .DisplayDetails();
+                    break;
+
+            }
 
         }
 
