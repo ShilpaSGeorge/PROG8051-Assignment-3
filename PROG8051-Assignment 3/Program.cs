@@ -12,6 +12,7 @@ Console.WriteLine("******Welcome to Vehicle Rental Agency. Please enter your Veh
 Car car = new Car();
 car.VehicleDetails();
 string model1;
+
 model1 = car.Model;
 char[] char1 = model1.ToCharArray();
 car.CarDetails();
@@ -34,9 +35,13 @@ motorcycle.MotorcycleDetails();
 motorcycle.DisplayDetails();
 
 RentalAgency rentalAgency = new RentalAgency();
+
 rentalAgency.AddItems(model1);
 rentalAgency.AddItems(model2);
+rentalAgency.AddItems(model3);
+Console.WriteLine("List of Vehicle Models Available");
 rentalAgency.DisplayDetails();
+rentalAgency.RemoveItem(model1);
 
 
 

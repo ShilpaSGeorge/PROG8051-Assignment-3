@@ -20,12 +20,31 @@ namespace PROG8051_Assignment_3.RentalAgency
        public void AddItems(string fleets) 
         { 
             fleet[count++] = fleets;
-            DisplayDetails();
+            
         }
 
         
-        public void RemoveItem()
+        public void RemoveItem(string item)
         {
+            int index = -1;
+            for(int i = 0; i < count; i++) 
+            {
+                if (fleet[i] == item)
+                {
+                    index = i;
+                }
+                
+            }
+            fleet[index] = null;
+            for(int i = index;i < count -1 ; i++)
+            {
+                fleet[i] = fleet[i + 1];
+
+            }
+            count--;
+            Console.WriteLine("Vehicle list after removal");
+            DisplayDetails();
+            
             
         }
 
